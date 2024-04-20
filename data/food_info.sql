@@ -13,5 +13,3 @@ INSERT INTO products (name, description, price) VALUES
     ('image_006', 'Rice Chex Cereal, 12 oz', 5.99);
     ('image_007', 'Chick Tortilla Soup, 14.5 oz', 4.69);
     ('image_008', 'Minestrone Soup, 15 oz', 4.99);
-
-
