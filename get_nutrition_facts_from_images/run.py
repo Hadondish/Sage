@@ -92,6 +92,14 @@ while True:
                 data['calories'] = calories_answer
                 break
 
+        prices_question = "What is the price?"
+        for _ in range(3):
+            prices_answer = ask_solar(context, prices_question)
+            grounded = check_groundedness(context, prices_question, prices_answer)
+            if grounded:
+                data['price'] = prices_answer
+                break
+
         json_data = json.dumps(data, indent=4)
         f = open("output.json", "a")
         f.write(json_data)
