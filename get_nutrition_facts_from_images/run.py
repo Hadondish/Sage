@@ -100,6 +100,14 @@ while True:
                 data['price'] = prices_answer
                 break
 
+        name_question = "What is the name?"
+        for _ in range(3):
+            name_answer = ask_solar(context, name_question)
+            grounded = check_groundedness(context, name_question, name_answer)
+            if grounded:
+                data['name'] = name_answer
+                break
+
         json_data = json.dumps(data, indent=4)
         f = open("output.json", "a")
         f.write(json_data)
